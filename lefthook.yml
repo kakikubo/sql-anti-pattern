@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  commands:
+    sql-formatter:
+      glob: "*.sql"
+      # sql-formatter は FILE を1つしか受け取れないため1ファイルずつ適用する
+      run: |
+        for f in {staged_files}; do
+          node_modules/.bin/sql-formatter --fix "$f"
+        done
+      stage_fixed: true

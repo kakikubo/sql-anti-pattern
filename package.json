@@ -1,0 +1,14 @@
+{
+  "name": "sql-anti-pattern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SQL アンチパターンの写経リポジトリ",
+  "scripts": {
+    "format:sql": "find . -name '*.sql' -not -path './node_modules/*' -exec sql-formatter --fix {} \\;",
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "lefthook": "^1.13.6",
+    "sql-formatter": "^15.6.10"
+  }
+}
