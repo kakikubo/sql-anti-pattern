@@ -2,7 +2,7 @@
 -- ここでは account_id でまとめ、アカウントごとに担当製品が何件あるかを数えている。
 SELECT
   product_id,
-  COUNT(*) AS products_per_count
+  COUNT(*) AS products_per_account
 FROM
   Contacts
 GROUP BY
