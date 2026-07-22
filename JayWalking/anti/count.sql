@@ -7,6 +7,6 @@ SELECT
   LENGTH(account_id) - LENGTH(
     REPLACE
       (account_id, ',', '')
-  ) + 1 AS contracts.per_product
+  ) + 1 AS accounts_per_product
 FROM
   Products;
